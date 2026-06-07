@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Le Terminal - Kebab & Grill</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --gold:#d4a35f;
+    --gold-light:#f1c27d;
+    --dark:#1a1412;
+    --dark2:#241b18;
+    --white:#fff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(rgba(15,10,8,.9),rgba(15,10,8,.95)),
+    url('https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?q=80&w=1920');
+    background-size:cover;
+    background-attachment:fixed;
+    color:white;
+}
+
+header{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:30px;
+}
+
+.hero{
+    max-width:900px;
+}
+
+.hero h1{
+    font-size:5rem;
+    font-weight:700;
+    letter-spacing:4px;
+}
+
+.hero h2{
+    font-family:'Dancing Script',cursive;
+    font-size:3rem;
+    color:var(--gold);
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:1.2rem;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    background:var(--gold);
+    color:black;
+    padding:15px 30px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    background:var(--gold-light);
+}
+
+section{
+    padding:80px 10%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-family:'Dancing Script',cursive;
+    font-size:3rem;
+    color:var(--gold);
+}
+
+.menu-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(212,163,95,.3);
+    backdrop-filter:blur(8px);
+    padding:25px;
+    border-radius:15px;
+}
+
+.card h3{
+    color:var(--gold);
+    margin-bottom:20px;
+}
+
+.item{
+    display:flex;
+    justify-content:space-between;
+    padding:10px 0;
+    border-bottom:1px dashed rgba(255,255,255,.15);
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:15px;
+    transition:.3s;
+}
+
+.gallery img:hover{
+    transform:scale(1.03);
+}
+
+.info{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.box{
+    background:rgba(255,255,255,.05);
+    padding:30px;
+    border-radius:15px;
+}
+
+.box h3{
+    color:var(--gold);
+    margin-bottom:20px;
+}
+
+.hours li{
+    list-style:none;
+    padding:8px 0;
+}
+
+footer{
+    text-align:center;
+    padding:40px;
+    background:#120d0c;
+}
+
+.phone{
+    font-size:2rem;
+    color:var(--gold);
+    font-weight:700;
+}
+
+.order-btn{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+    background:#25D366;
+    color:white;
+    border:none;
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    font-size:30px;
+    cursor:pointer;
+    box-shadow:0 10px 20px rgba(0,0,0,.3);
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:3rem;
+}
+
+.hero h2{
+    font-size:2rem;
+}
+
+.info{
+    grid-template-columns:1fr;
+}
+
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="hero">
+        <h1>LE TERMINAL</h1>
+        <h2>Kebab & Grill</h2>
+        <p>Grillades, kebabs, tacos et spécialités turques préparés avec passion.</p>
+
+        <a href="#menu" class="btn">
+            Voir le Menu
+        </a>
+    </div>
+</header>
+
+<section id="menu">
+
+    <div class="section-title">
+        <h2>Notre Carte</h2>
+    </div>
+
+    <div class="menu-grid">
+
+        <!-- Sandwichs -->
+
+        <div class="card">
+            <h3>🥙 Sandwichs</h3>
+
+            <div class="item">
+                <span>Kebab</span>
+                <span>8,50€ | Menu 12,00€</span>
+            </div>
+
+            <div class="item">
+                <span>Galette</span>
+                <span>8,50€ | Menu 12,00€</span>
+            </div>
+
+            <div class="item">
+                <span>Maxi Galette</span>
+                <span>12,00€ | Menu 16,00€</span>
+            </div>
+
+            <div class="item">
+                <span>Miche Kebab</span>
+                <span>8,50€ | Menu 12,00€</span>
+            </div>
+
+            <div class="item">
+                <span>Steak</span>
+                <span>8,50€ | Menu 12,00€</span>
+            </div>
+
+            <div class="item">
+                <span>Escalope</span>
+                <span>8,50€ | Menu 11,50€</span>
+            </div>
+
+            <div class="item">
+                <span>Cordon Bleu</span>
+                <span>9,00€ | Menu 11,50€</span>
+            </div>
+
+            <div class="item">
+                <span>Tacos (viande au choix)</span>
+                <span>9,00€ | Menu 12,50€</span>
+            </div>
+
+            <div class="item">
+                <span>Maxi Tacos</span>
+                <span>13,00€ | Menu 16,00€</span>
+            </div>
+
+            <div class="item">
+                <span>Burger</span>
+                <span>6,00€ | Menu 8,50€</span>
+            </div>
+        </div>
+
+        <!-- Assiettes -->
+
+        <div class="card">
+            <h3>🍖 Nos Assiettes</h3>
+
+            <div class="item">
+                <span>Kebab</span>
+                <span>15,00€</span>
+            </div>
+
+            <div class="item">
+                <span>Köfte</span>
+                <span>15,00€</span>
+            </div>
+
+            <div class="item">
+                <span>Brochettes de Poulet</span>
+                <span>15,00€</span>
+            </div>
+
+            <div class="item">
+                <span>Steak</span>
+                <span>15,00€</span>
+            </div>
+
+            <div class="item">
+                <span>Escalope</span>
+                <span>14,00€</span>
+            </div>
+
+            <div class="item">
+                <span>Cordon Bleu</span>
+                <span>15,00€</span>
+            </div>
+
+            <div class="item">
+                <span>Côtelettes</span>
+                <span>19,50€</span>
+            </div>
+
+            <div class="item">
+                <span>Bavette</span>
+                <span>19,50€</span>
+            </div>
+
+            <div class="item">
+                <span>Assortiment de Grillades</span>
+                <span>21,00€</span>
+            </div>
+        </div>
+
+        <!-- Entrées -->
+
+        <div class="card">
+            <h3>🥗 Entrées, Accompagnements & Salades</h3>
+
+            <div class="item">
+                <span>Salade Fermière</span>
+                <span>9,50€</span>
+            </div>
+
+            <div class="item">
+                <span>Haydari</span>
+                <span>9,50€</span>
+            </div>
+
+            <div class="item">
+                <span>Chakchouka</span>
+                <span>8,50€</span>
+            </div>
+
+            <div class="item">
+                <span>Cacik</span>
+                <span>7,00€</span>
+            </div>
+
+            <div class="item">
+                <span>Soupe de Lentilles</span>
+                <span>7,00€</span>
+            </div>
+
+            <div class="item">
+                <span>Assortiment d'Entrées</span>
+                <span>9,00€</span>
+            </div>
+
+            <div class="item">
+                <span>Nuggets x5</span>
+                <span>4,50€</span>
+            </div>
+
+            <div class="item">
+                <span>Nuggets x9</span>
+                <span>7,00€</span>
+            </div>
+
+            <div class="item">
+                <span>Frites Petite</span>
+                <span>2,50€</span>
+            </div>
+
+            <div class="item">
+                <span>Frites Grande</span>
+                <span>4,00€</span>
+            </div>
+
+            <div class="item">
+                <span>Barquette Viande Petite</span>
+                <span>5,00€</span>
+            </div>
+
+            <div class="item">
+                <span>Barquette Viande Grande</span>
+                <span>8,00€</span>
+            </div>
+        </div>
+
+        <!-- Desserts -->
+
+        <div class="card">
+            <h3>🍰 Desserts</h3>
+
+            <div class="item">
+                <span>2 Baklavas</span>
+                <span>4,00€</span>
+            </div>
+
+            <div class="item">
+                <span>Tiramisu</span>
+                <span>4,00€</span>
+            </div>
+
+            <div class="item">
+                <span>Salade de Fruits</span>
+                <span>5,00€</span>
+            </div>
+
+            <div class="item">
+                <span>Glace</span>
+                <span>3,00€</span>
+            </div>
+        </div>
+
+        <!-- Boissons -->
+
+        <div class="card">
+            <h3>🥤 Boissons & Sauces</h3>
+
+            <div class="item">
+                <span>Café, Thé, Eau Minérale</span>
+                <span>1,50€</span>
+            </div>
+
+            <div class="item">
+                <span>Canettes</span>
+                <span>2,00€</span>
+            </div>
+
+            <div class="item">
+                <span>Sauces Maison & Classiques</span>
+                <span>Inclus</span>
+            </div>
+
+            <small style="display:block;margin-top:15px;color:#ccc;">
+                Mayonnaise, Moutarde, Algérienne, Tartare,
+                Harissa, Curry, Ketchup, Burger, Samouraï,
+                Blanche maison, Fromagère maison.
+            </small>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <div class="section-title">
+        <h2>Nos Grillades</h2>
+    </div>
+
+    <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=1000">
+        <img src="https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?q=80&w=1000">
+        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=1000">
+    </div>
+</section>
+
+<section>
+    <div class="info">
+
+        <div class="box">
+            <h3>🕒 Horaires</h3>
+
+            <ul class="hours">
+                <li>Lundi : Fermé</li>
+                <li>Mardi : 10h00 - 22h30</li>
+                <li>Mercredi : 10h00 - 22h30</li>
+                <li>Jeudi : 10h00 - 22h30</li>
+                <li>Vendredi : 10h00 - 22h30</li>
+                <li>Samedi : 12h00 - 22h30</li>
+                <li>Dimanche : 12h00 - 22h30</li>
+            </ul>
+        </div>
+
+        <div class="box">
+            <h3>📍 Contact</h3>
+
+            <p>Sathonay-Camp</p>
+            <br>
+
+            <div class="phone">
+                09 81 64 43 43
+            </div>
+
+            <br>
+
+            <a href="tel:0981644343" class="btn">
+                Appeler maintenant
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <h3>Le Terminal Kebab & Grill</h3>
+    <p>Produit Halal • Spécialités Turques</p>
+</footer>
+
+<button class="order-btn" id="whatsappBtn">
+📱
+</button>
+
+<script>
+document.getElementById("whatsappBtn").addEventListener("click", () => {
+    window.open(
+        "https://wa.me/330981644343",
+        "_blank"
+    );
+});
+
+const cards = document.querySelectorAll(".card");
+
+const observer = new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.animate([
+                {opacity:0, transform:"translateY(40px)"},
+                {opacity:1, transform:"translateY(0)"}
+            ],{
+                duration:700,
+                fill:"forwards"
+            });
+        }
+    });
+});
+
+cards.forEach(card=>observer.observe(card));
+</script>
+
+</body>
+</html>
